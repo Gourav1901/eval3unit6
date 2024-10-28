@@ -6,6 +6,11 @@ const swaggerSetup = require('./utils/swagger');
 
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.send("Home page for hospital management system")
+})
+
+
 app.use('/doctors', require('./routes/doctorRoutes'));
 app.use('/appointments', require('./routes/appointmentRoutes'));
 
